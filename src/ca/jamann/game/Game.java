@@ -15,12 +15,6 @@ public class Game implements Runnable {
 		new Thread(this).start();
 	}
 	
-	/*
-	public synchronized void stop() {
-		running = false;
-	}
-	*/
-	
 	public void run() {
 		long lastTime = System.nanoTime();
 		double nsPerTick = 1000000000D/60D;
@@ -37,13 +31,7 @@ public class Game implements Runnable {
 				tick();
 				delta -= 1;
 			}
-			/*
-			try {
-				Thread.sleep(1);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-			*/
+			
 			if (System.currentTimeMillis() - lastTimer >= 1000) {
 				lastTimer += 1000;
 			}

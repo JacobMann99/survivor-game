@@ -17,7 +17,7 @@ public class GUI extends JFrame implements ActionListener {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	private static GUI instance = null; // creates instance of type Speed
+	private static GUI instance = null; // creates instance of type GUI
 	
 	public static GUI getInstance() {
 		
@@ -98,10 +98,6 @@ public class GUI extends JFrame implements ActionListener {
     private JLabel backgroundMeterB;
     private JLabel woodMeter;
     private JLabel backgroundMeterWood;
-    //private JLabel stoneMeter;
-    //private JLabel backgroundMeterStone;
-    //private JLabel ironMeter;
-    //private JLabel backgroundMeterIron;
     private JLabel buildMeter;
     private JLabel backgroundMeterBuild;
     private JLabel foodSymbol;
@@ -132,10 +128,6 @@ public class GUI extends JFrame implements ActionListener {
     private ImageIcon backgroundMeterImg;
     private BufferedImage meterD;
     private ImageIcon woodMeterImg;
-    //private BufferedImage meterE;
-    //private ImageIcon stoneMeterImg;
-    //private BufferedImage meterF;
-    //private ImageIcon ironMeterImg;
     private BufferedImage meterG;
     private ImageIcon buildMeterImg;
 	
@@ -259,34 +251,6 @@ public class GUI extends JFrame implements ActionListener {
     	
     }
     
-    /*
-    private void loadStoneMeter() {
-    	try {
-			meterE = ImageIO.read(GUI.class.getResource("/images/stone_meter.png"));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-    	
-    	stoneMeterImg = new ImageIcon(meterE);
-    	
-    }
-    */
-    
-    /*
-    private void loadIronMeter() {
-    	try {
-			meterF = ImageIO.read(GUI.class.getResource("/images/iron_meter.png"));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-    	
-    	ironMeterImg = new ImageIcon(meterF);
-    	
-    }
-    */
-    
     private void loadBuildMeter() {
     	try {
 			meterG = ImageIO.read(GUI.class.getResource("/images/build_meter.png"));
@@ -327,8 +291,6 @@ public class GUI extends JFrame implements ActionListener {
     	loadBackgroundMeter();
     	loadBuildMeter();
     	loadWoodMeter();
-    	//loadStoneMeter();
-    	//loadIronMeter();
 		
 		setLayout(null);
 		setSize(WIDTH*SCALE, HEIGHT*SCALE);
